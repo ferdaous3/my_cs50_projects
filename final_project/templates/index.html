@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <h2>مهامي</h2>
+
+    <form method="post">
+        <input type="text" name="task" placeholder="أضف مهمة جديدة" required>
+        <button type="submit">إضافة</button>
+    </form>
+
+    <ul>
+        {% for task in tasks %}
+            <li>{{ task[0] }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
